@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Theme Carbon',
+    title: 'Carbon Design System',
+    siteUrl: 'https://www.carbondesignsystem.com',
+    description: 'A design system built by IBM'
   },
   __experimentalThemes: [
     {
