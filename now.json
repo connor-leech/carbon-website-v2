@@ -1,0 +1,7 @@
+{
+    "version": 2,
+    "name": "connor-leech",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+    ]
+}
