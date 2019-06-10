@@ -33,6 +33,7 @@
     - title: Themes
       path: /guidelines/themes
     - title: Typography
+      path: /guidelines/typography
 - title: Components
   pages:
     - title: Accordion
