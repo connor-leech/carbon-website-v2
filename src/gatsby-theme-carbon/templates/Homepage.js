@@ -41,7 +41,7 @@ const SecondRightText = () => (
 
 const BannerText = () => (
   <h1>
-    Carbon
+    Connor
     <br />
     Design System
   </h1>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Carbon Design System',
+    title: 'Connor Design System',
     siteUrl: 'https://www.carbondesignsystem.com',
-    description: 'A design system built by IBM'
+    description: 'A design system built by Connor Leech'
   },
   __experimentalThemes: [
     {
