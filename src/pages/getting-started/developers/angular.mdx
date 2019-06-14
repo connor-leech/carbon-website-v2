@@ -1,91 +1,77 @@
 ---
-title: Angular
-tabs: ['React', 'Angular', 'Vanilla', 'Other']
+title: Developers
+tabs: ['Vanilla', 'React', 'Angular', 'Vue', 'Other frameworks']
 ---
 
-import {
-  AnchorLinks,
-  AnchorLink,
-  PageDescription,
-  Video,
-} from 'gatsby-theme-carbon';
-
-<PageDescription>
-
-Add-on repositories, or repos, are components built for a specific product or
-experience. The repos are built on top of the core Carbon repo, and enable
-teams to create their own custom components that follow Carbon's visual style
-and guidelines.
-
-</PageDescription>
-
 <AnchorLinks>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
-  <AnchorLink>The foundation</AnchorLink>
+  <AnchorLink>Carbon Angular library</AnchorLink>
+  <AnchorLink>Install</AnchorLink>
+  <AnchorLink>Development</AnchorLink>
 </AnchorLinks>
 
-## Images
+## Resources
 
-![blossom](../../../images/blossom.jpg)
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      subTitle="Try Angular components with CodeSandbox."
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://codesandbox.io/s/0129r494ql"
+      >
 
-## Videos
+![](/images/codesandbox.png)
 
-<Video title="Eyes" vimeoId="310583077" />
+  </ResourceCard>
+</Column>
+</Row>
 
-## Checklist
 
-Please answer yes or no to the following list of questions:
+## Carbon Angular library
 
-- Is your team using Carbon components?
-- Does your team have the need to add custom components in addition to Carbon's core components?
-- Will these components only be needed by your team?
-- Do you need these custom components to match Carbon's visual style?
+The [library](http://angular.carbondesignsystem.com/) provides front-end developers & engineers a collection of reusable Angular components to build websites and user interfaces. Adopting the library enables developers to use consistent markup, styles, and behavior in prototype and production work.
 
-#### If you've answered "yes" to all the questions above...
+## Install
 
-then you definitely qualify for an add-on repo! Jump to the next section to learn about the required steps to create an add-on repo.
+Assuming we're starting with a new @angular/cli project:
 
-#### If you answered "no" to any of the questions above...
+```sh
+$ npx @angular/cli new my-project --style=scss
+$ cd my-project
+$ npm i --save carbon-components-angular carbon-components
+```
 
-but still feel like you need an add-on repo, please reach out to the a member of the Carbon team to discuss additional options. It might be that your component need is something that can be shared across the core Carbon organization. In this case, we can talk about how you can contribute this component back to the core Carbon repo.
+Then we need to include carbon-components in `src/styles.scss`:
 
-## Creating add-ons
+```scss
+@import '~carbon-components/scss/globals/scss/styles.scss';
+```
 
-There are a number of growing add-on repos that can be found under the [Carbon org](https://github.com/carbon-design-system). If you'd like to create an add-on repo we have created a [vanilla boilerplate](https://github.com/carbon-design-system/carbon-boilerplate) and a [react boilerplate](https://github.com/carbon-design-system/carbon-addons-boilerplate-react) that you can clone to get started. For further assistance please reach out to a member of the carbon design team.
+That's it! Now start the server and start building.
 
-### Private vs public
+```sh
+$ npm start
+```
 
-Carbon Design System is an open-source project and we do encourage teams using Carbon Design System to stay open-source as well. However, if your product has privacy constraints, we can discuss options for creating an add-on repo under our GitHub Enterprise account.
+_Note: This isn't the only way to bootstrap a_ `carbon-components-angular` _application, but the combination of_ `@angular/cli` _and the_ `carbon-components` _scss is our recommended setup._
 
-## Contributing to add-ons
+### Using our starter app
 
-Add-ons are generally easier to contribute to because they are not fully managed by the Carbon team. Below are the items that you need to pass in order for your contribution to be accepted. You can read our full contribution process for [design](/contributing/designers) and [development](/contributing/developers) to learn more.
+![carbon-angular-starter screenshot](images/carbon-angular-starter.png)
 
-| Category      | Metric                                              | Core library | Add-ons |
-| ------------- | --------------------------------------------------- | ------------ | ------- |
-| Accessibility | WCAG AA                                             | ✅           | ✅      |
-|               | Keyboard tabbing                                    | ✅           | ✅      |
-|               | Carbon custom focus states                          | ✅           |         |
-| Visual + UX   | Carbon themed                                       | ✅           |         |
-|               | Universal pattern <br />(fits for 2-3 use cases)    | ✅           |         |
-|               | Interaction states (hover, active, focus, disabled) | ✅           | ✅      |
+We recommend using the [carbon-angular-starter](https://github.com/carbon-design-system/carbon-angular-starter) for bootstrapping applications with Carbon components. Within five minutes your app will be running with the following already configured:
 
-## Ownership
+- Angular-cli
+- Build process
+- Code styles and editor configs
+- Folder structure
+- Lazy loading
+- Routing
+- Service workers
+- Test framework
 
-Once an add-on repo has been created, the team or product that requested it is in charge of maintaining and keeping it up to date. This involves carrying over specific changes from the core Carbon repo, as well as making sure it is using the latest major version of Carbon Components.
+Check out the [readme](https://github.com/carbon-design-system/carbon-angular-starter) for installation instructions.
 
-## Carbon support
+## Development
 
-The table below shows the Carbon team's level of support for the Core library vs. the Add-ons repo.
-
-| Support category          | Core library | Add-ons |
-| ------------------------- | ------------ | ------- |
-| General design questions  | ✅           | ✅      |
-| Design feedback & support | ✅           |         |
-| Troubleshooting           | ✅           | ✅      |
-| Bug fixes                 | ✅           |         |
+Please refer to the [contributing guidelines](https://github.com/IBM/carbon-components-angular/blob/master/README.md#contributing) before starting any work.
