@@ -8,33 +8,28 @@ import Carbon from '../../images/carbon.jpg';
 
 const FirstLeftText = () => (
   <p>
-    Think → <strong>Guidance</strong>
+    Inclusive, flexible <br />and consistent
   </p>
 );
 
 const FirstRightText = () => (
   <p>
-    <strong>Build Bonds</strong>
-    <br />
-    This is the guiding ethos behind IBM’s design philosophy and principles.
-    This helps us distinguish every element and every experience Designed by
-    IBM.
+    Carbon is IBM’s <strong>open-source</strong> design system for products and experiences. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.
   </p>
 );
 
-const SecondLeftText = () => <p>Wondering how to contribute?</p>;
+const SecondLeftText = () => <p>Ready to contribute?</p>;
 
 const SecondRightText = () => (
   <p>
-    We welcome all feedback, designs, or ideas in order to produce the best
-    possible experience for our users. If you’re interested in contributing,
-    check out our contributing guidelines to get started.
+    We welcome all feedback, designs, and ideas. If you’re interested in contributing,
+    check out our contribution guidelines to get started.
     <br />
     <a
       css={({ typeStyles }) => typeStyles.bodyShort02}
       href="https://www.carbondesignsystem.com/contributing/governance"
     >
-      Start Contributing →
+      Start contributing →
     </a>
   </p>
 );
