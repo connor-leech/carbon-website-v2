@@ -3,39 +3,45 @@ title: Color
 tabs: ['Overview', 'Usage']
 ---
 
-### Maintaining consistent and engaging digital interfaces throughout IBM, whether applications or experiences, demands extended guidance around color usage. The following concepts are the foundation as we strive to achieve balance and harmony through our User Interface design.
+<PageDescription>
+
+Maintaining consistent and engaging digital interfaces throughout IBM, whether applications or experiences, demands extended guidance around color usage. The following concepts are the foundation as we strive to achieve balance and harmony through our User Interface design.
+
+</PageDescription>
 
 <AnchorLinks>
-
-- [Introduction](#introduction)
-- [Color anatomy](#color-anatomy)
-- [Implementing color](#implementing-color)
-- [Accessibility](#accessibility)
-
+  <AnchorLink>Introduction</AnchorLink>
+  <AnchorLink>Color anatomy</AnchorLink>
+  <AnchorLink>Implementing color</AnchorLink>
+  <AnchorLink>Accessibility</AnchorLink>
 </AnchorLinks>
 
 ## Resources
 
-<Row className="tile--group">
-<Column offsetLg="4"  colLg="4" colMd="4" noGutterSm>
-  <ClickableTile
-    title="RGB color palettes (.ase and .clr)"
-    href="https://www.carbondesignsystem.com/files/IBM_Colors_RGB.zip"
-    type="resource">
+<Row className="resource-card-group">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="RGB color palettes (.ase and .clr)"
+      aspectRatio="2:1"
+      actionIcon="download"
+      href="https://www.carbondesignsystem.com/files/IBM_Colors_RGB.zip"
+      >
 
-![](images/ase.png)
+![](/images/ase.png)
 
-  </ClickableTile>
+  </ResourceCard>
 </Column>
-<Column colLg="4" colMd="4"  noGutterSm>
-  <ClickableTile
-    title="Elements package: Color"
-    href="https://github.com/IBM/carbon-elements/tree/master/packages/colors"
-    type="resource">
+<Column colMd={4} colLg={4} noGutterSm>
+    <ResourceCard
+      title="Elements package: Color"
+      aspectRatio="2:1"
+      actionIcon="arrowRight"
+      href="https://github.com/IBM/carbon-elements/tree/master/packages/colors"
+      >
 
-![](images/github-icon.png)
+![](/images/github-icon.png)
 
-  </ClickableTile>
+  </ResourceCard>
 </Column>
 </Row>
 
@@ -55,15 +61,15 @@ Carbon's default themes are derived from the IBM Design Language color palette. 
 
 The core Blue family serves as the primary action color across all IBM products and experiences. Additional colors are used sparingly and purposefully.
 
-<ImageComponent cols="12" caption="Alert colors">
-
 ![color anatomy](images/color_anatomy_bkg.svg)
 
-</ImageComponent>
+<Caption>
+  Alert colors
+</Caption>
 
 ## Implementing color
 
-Carbon uses _tokens_ and _themes_ to manage color. Tokens are role-based, and themes specify the color values that serve those roles in the UI.
+Carbon uses tokens and themes to manage color. Tokens are role-based, and themes specify the color values that serve those roles in the UI.
 
 | Term    | Definition                                                                                                  |     |
 | ------- | ----------------------------------------------------------------------------------------------------------- | --- |
@@ -74,7 +80,7 @@ Carbon uses _tokens_ and _themes_ to manage color. Tokens are role-based, and th
 
 ### Tokens
 
-Color in Carbon is managed using color tokens. Tokens are a method of abstracting color by role or usage, independent of the actual color values. For example, instead of needing to code all instances of input labels in a UI to be `#565656`, the _form_ component in Carbon specifies the token `$text-02` for these lables, and that token is specified in a separate theme file to be `#565656`. For a different theme, that same `text-02` token could be mapped to a different hex value, like `#ffffff`. Thus, tokens not only allow for more efficient color updates within a theme, but also enable any UI (or portion of a UI) built with Carbon to easily switch between different themes.
+Color in Carbon is managed using color tokens. Tokens are a method of abstracting color by role or usage, independent of the actual color values. For example, instead of needing to code all instances of input labels in a UI to be `#565656`, the form component in Carbon specifies the token `$text-02` for these lables, and that token is specified in a separate theme file to be `#565656`. For a different theme, that same `text-02` token could be mapped to a different hex value, like `#ffffff`. Thus, tokens not only allow for more efficient color updates within a theme, but also enable any UI (or portion of a UI) built with Carbon to easily switch between different themes.
 
 A single token can be associated with multiple roles, but only if the color value is used consistently across those roles. This allows for uniform color application across themes while maintaining full styling flexibility.
 
@@ -242,17 +248,17 @@ The focus state usually appears as a Blue 60 border in the light theme and as a 
 
 Disabled components are unavailable for interaction, so they don't receive hover or focus and are not subject to WC3 contrast compliance standards. For the dark themes, disabled values are two full steps lighter than their respective background. For light themes, they are two full steps darker. The exception is that the White theme disabled value is Gray 30.
 
-<ImageComponent cols="12" caption="Light theme interactive tokens.">
-
 ![interactive states light](images/Interactive_states_light_new.png)
 
-</ImageComponent>
-
-<ImageComponent cols="12" caption="Dark theme interactive tokens.">
+<Caption>
+  Light theme interactive tokens.
+</Caption>
 
 ![interactive states dark](images/Interactive_states_dark_new.png)
 
-</ImageComponent>
+<Caption>
+  Dark theme interactive tokens.
+</Caption>
 
 ## Accessibility
 
@@ -266,6 +272,8 @@ Beyond black and white, the IBM color palette provides a range of accessible com
 
 ![Digital accessibility](images/accessibility_02.png)
 
-_Blue color family, 60 background_
+<Caption>
+Blue color family, 60 background
+</Caption>
 
 For a complete look at color-related accessibility topics in Carbon, visit the [Accessibility](/guidelines/accessibility/color) section.
